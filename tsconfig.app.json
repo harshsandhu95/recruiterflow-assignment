@@ -23,7 +23,14 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["vitest/globals"]
+    /* Types */
+    "types": ["vitest/globals"],
+
+    /* Absolute Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }
