@@ -15,7 +15,7 @@ export default function WorldBusiness() {
     <section>
       <fieldset className="px-4 pb-12 space-y-4 border rounded-lg">
         <legend>
-          <h1 className="px-2 text-sm font-bold">World Business News</h1>
+          <h2 className="px-2 text-sm font-bold">World Business News</h2>
         </legend>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

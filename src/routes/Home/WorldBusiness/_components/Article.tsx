@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { cn, formatDateTime } from "@/lib/utils";
 import type { BusinessNews } from "@/types/BusinessNews";
@@ -14,7 +15,12 @@ export default function Article({ article }: Props) {
   const { date, day } = formatDateTime(article.published_date);
 
   return (
-    <article className="p-6 flex flex-col items-start justify-between space-y-4 bg-card text-card-foreground shadow-md rounded-lg">
+    <motion.article
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false, margin: "-96px" }}
+      className="p-6 flex flex-col items-start justify-between space-y-4 bg-card text-card-foreground shadow-md rounded-lg"
+    >
       <div className="w-full flex items-center justify-between gap-4 text-xs">
         <p>{day}</p>
         <p>{date}</p>
@@ -47,6 +53,6 @@ export default function Article({ article }: Props) {
       <Button asChild variant="link" size="link">
         <Link to={`/business/${article.slug_name}`}>Read More</Link>
       </Button>
-    </article>
+    </motion.article>
   );
 }
