@@ -4,7 +4,7 @@ import { newsApi } from "./services/newsApi";
 
 export const store = configureStore({
   reducer: {
-    newsSliceReducer,
+    news: newsSliceReducer,
     [newsApi.reducerPath]: newsApi.reducer,
   },
   middleware(getDefaultMiddleware) {
