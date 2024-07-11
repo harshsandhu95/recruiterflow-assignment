@@ -9,7 +9,7 @@ export type Multimedia = {
   copyright: string;
 };
 
-export type Article = {
+export type BusinessNews = {
   slug_name: string;
   section: string;
   subsection: string;

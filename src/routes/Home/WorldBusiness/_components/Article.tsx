@@ -1,8 +1,8 @@
 import { formatDateTime } from "@/lib/utils";
-import type { Article } from "@/types/article";
+import type { BusinessNews } from "@/types/BusinessNews";
 
 interface Props {
-  article: Article;
+  article: BusinessNews;
 }
 
 export default function Article({ article }: Props) {
