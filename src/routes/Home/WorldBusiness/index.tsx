@@ -1,7 +1,7 @@
 import React from "react";
-import Article from "./_components/Article";
 import { useGetBusinessNewsQuery } from "@/services/newsApi";
 import { Skeleton } from "@/components/ui/Skeleton";
+import Article from "./_components/Article";
 
 export default function WorldBusiness() {
   const { data, isLoading } = useGetBusinessNewsQuery();
@@ -12,15 +12,19 @@ export default function WorldBusiness() {
   ));
 
   return (
-    <section className="space-y-4">
-      <h1 className="text-xl font-bold">World Business News</h1>
+    <section>
+      <fieldset className="px-4 pb-12 space-y-4 border rounded-lg">
+        <legend>
+          <h1 className="px-2 text-sm font-bold">World Business News</h1>
+        </legend>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {isLoading && skeletonArray}
-        {articles.map((article) => (
-          <Article key={article.slug_name} article={article} />
-        ))}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {isLoading && skeletonArray}
+          {articles.map((article) => (
+            <Article key={article.slug_name} article={article} />
+          ))}
+        </div>
+      </fieldset>
     </section>
   );
 }
