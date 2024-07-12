@@ -22,13 +22,17 @@ export const newsSlice = createSlice({
       return (state = actions.payload);
     },
     addNews(state, actions: PayloadAction<News>) {
-      state.push({
-        dateTime: formatISO(new Date()),
-        deleted: false,
-        ...actions.payload,
-      });
+      const newArr = [
+        ...state,
+        {
+          dateTime: formatISO(new Date()),
+          deleted: false,
+          ...actions.payload,
+        },
+      ];
 
-      localStorage.setItem(localStorageKey, JSON.stringify(state));
+      localStorage.setItem(localStorageKey, JSON.stringify(newArr));
+      return newArr;
     },
     removeNews(state, actions: PayloadAction<string>) {
       const newArr = state.filter((item) => item.id !== actions.payload);
