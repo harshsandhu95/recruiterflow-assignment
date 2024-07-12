@@ -19,6 +19,14 @@
 - React Router Dom (Routes)
 - Radix (For Radix Primitives to use accessiblity optimised components)
 
+### How it works
+
+1. On the homepage you can look at the news you post and world business news section.
+2. Click on Post a News button to create a new post.
+3. The posts create are stored in local storage so they persist.
+4. You can remove your posts by clicking the delete button.
+5. You can read world business news by clicking Read More button and it will open the particular news.
+
 ### How to Run
 
 #### Production
