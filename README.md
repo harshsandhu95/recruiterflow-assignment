@@ -23,7 +23,7 @@
 
 #### Production
 
-The app is hosted on vercel and can be accessed through the domain <https://news.harshsandhu.com>
+The app is hosted on vercel and can be accessed through the domain <https://recruiterflow.harshsandhu.com>
 
 #### Local Server
 
